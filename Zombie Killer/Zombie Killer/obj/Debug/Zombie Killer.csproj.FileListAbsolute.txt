@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\bin\Debug\Zombie Killer.exe.config
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\bin\Debug\Zombie Killer.exe
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\bin\Debug\Zombie Killer.pdb
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\obj\Debug\Zombie Killer.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\obj\Debug\Zombie_Killer.Form1.resources
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\obj\Debug\Zombie_Killer.Properties.Resources.resources
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\obj\Debug\Zombie Killer.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\obj\Debug\Zombie Killer.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\obj\Debug\Zombie Killer.exe
+C:\Users\user\source\repos\Zombie Killer\Zombie Killer\obj\Debug\Zombie Killer.pdb
