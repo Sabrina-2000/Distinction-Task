@@ -25,6 +25,7 @@ namespace Zombie_Killer
         int zombieSpeed = 3; // this integer will hold the speed which the zombies move in the game
         int score = 0; // this integer will hold the score the player achieved through the game
         bool gameOver = false; // this boolean is false in the beginning and it will be used when the game is finished
+        int hello;
         Random rnd = new Random(); // this is an instance of the random class we will use this to create a random number for this game
 
         List<PictureBox> zombiesList = new List<PictureBox>();
