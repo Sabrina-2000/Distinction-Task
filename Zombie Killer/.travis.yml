@@ -1,2 +1,7 @@
 language: csharp
 solution: Zombie Killer.sln
+mono:
+  - latest
+  - 3.12.0
+  - 3.10.0
+
