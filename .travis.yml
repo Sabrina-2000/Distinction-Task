@@ -1,5 +1,5 @@
 language: csharp
-solution: Zombie Killer.sln
+solution: Zombie_Killer.sln
 mono:
   - latest
   - 3.12.0
