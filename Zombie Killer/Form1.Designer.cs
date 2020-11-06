@@ -35,6 +35,7 @@
             this.healthBar = new System.Windows.Forms.ProgressBar();
             this.player = new System.Windows.Forms.PictureBox();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
+            this.MedicTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +96,12 @@
             this.GameTimer.Interval = 20;
             this.GameTimer.Tick += new System.EventHandler(this.MainTimerEvent);
             // 
+            // MedicTimer
+            // 
+            this.MedicTimer.Enabled = true;
+            this.MedicTimer.Interval = 10000;
+            this.MedicTimer.Tick += new System.EventHandler(this.MedicTimerEvent);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +131,7 @@
         private System.Windows.Forms.ProgressBar healthBar;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Timer GameTimer;
+        private System.Windows.Forms.Timer MedicTimer;
     }
 }
 

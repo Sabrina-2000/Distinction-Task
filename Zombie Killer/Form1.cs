@@ -37,6 +37,11 @@ namespace Zombie_Killer
             RestartGame();
         }
 
+        private void MedicTimerEvent(object sender, EventArgs e)
+        {
+            DropMedic();
+        }
+
         private void MainTimerEvent(object sender, EventArgs e)
         {
             if(playerHealth > 1)
@@ -48,6 +53,7 @@ namespace Zombie_Killer
                 gameOver = true;
                 player.Image = Properties.Resources.dead;
                 GameTimer.Stop();
+                MedicTimer.Stop();
             }
 
             txtAmmo.Text = "Ammo: " + ammo;
@@ -82,6 +88,23 @@ namespace Zombie_Killer
                         this.Controls.Remove(x);
                         ((PictureBox)x).Dispose();
                         ammo += 5;
+                    }
+                }
+
+                if (x is PictureBox && (string)x.Tag == "medic")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        this.Controls.Remove(x);
+                        ((PictureBox)x).Dispose();
+                        if ((playerHealth + 30) <= 100)
+                        {
+                            playerHealth += 30;
+                        }
+                        else
+                        {
+                            playerHealth = 100;
+                        }
                     }
                 }
 
@@ -244,6 +267,19 @@ namespace Zombie_Killer
             player.BringToFront();
         }
 
+        private void DropMedic()
+        {
+            PictureBox medic = new PictureBox();
+            medic.Image = Properties.Resources.medic;
+            medic.SizeMode = PictureBoxSizeMode.AutoSize;
+            medic.Left = rnd.Next(15, this.ClientSize.Width - medic.Width);
+            medic.Top = rnd.Next(60, this.ClientSize.Height - medic.Height);
+            medic.Tag = "medic";
+            this.Controls.Add(medic);
+            medic.BringToFront();
+            player.BringToFront();
+        }
+
         private void RestartGame()
         {
             player.Image = Properties.Resources.up;
@@ -269,6 +305,7 @@ namespace Zombie_Killer
             ammo = 10;
 
             GameTimer.Start();
+            MedicTimer.Start();
         }
     }
 }
