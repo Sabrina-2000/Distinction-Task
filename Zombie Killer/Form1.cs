@@ -47,13 +47,13 @@ namespace Zombie_Killer
         }
 
         private void SuperGunTimerEvent(object sender, EventArgs e)
-        {   // drop the medic after every 20 seconds
+        {   // drop the gun after every 20 seconds
             DropSuperGun();
             SuperGunTimer.Enabled = false;
         }
 
         private void LaserGunTimerEvent(object sender, EventArgs e)
-        {   // drop the medic after 30 seconds
+        {   // drop the gun after 30 seconds
             DropLaserGun();
             LaserGunTimer.Enabled = false;
         }
@@ -132,7 +132,7 @@ namespace Zombie_Killer
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds)) // if the player intersects with ammor 
                     {
-                        this.Controls.Remove(x); // remove the ammo on screen
+                        this.Controls.Remove(x); // remove the gun on screen
                         ((PictureBox)x).Dispose(); // dispose the picture box
                         inventory.collectItem("SuperGun");// get super gun
                         superGun.Image = Properties.Resources.SuperGun;
@@ -144,7 +144,7 @@ namespace Zombie_Killer
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds)) // if the player intersects with ammor 
                     {
-                        this.Controls.Remove(x); // remove the ammo on screen
+                        this.Controls.Remove(x); // remove the gun on screen
                         ((PictureBox)x).Dispose(); // dispose the picture box
                         inventory.collectItem("LaserGun");// get super gun
                         laserGun.Image = Properties.Resources.LaserGun;
@@ -403,6 +403,5 @@ namespace Zombie_Killer
             MedicTimer.Start();
             SuperGunTimer.Start();
         }
-
     }
 }

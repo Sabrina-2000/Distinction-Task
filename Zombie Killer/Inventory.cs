@@ -29,8 +29,5 @@ namespace Zombie_Killer
         {
             return bag.Length;
         }
-
-
-
     }
 }

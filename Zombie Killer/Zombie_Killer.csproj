@@ -123,6 +123,7 @@
     <None Include="Resources\LaserBulletHorizontal.png" />
     <None Include="Resources\NormalBullet.png" />
     <None Include="Resources\NormalBulletHorizontal.png" />
+    <Content Include="Resources\LaserBullet.png" />
     <Content Include="Resources\SuperGun.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

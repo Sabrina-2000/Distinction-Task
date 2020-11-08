@@ -99,18 +99,6 @@
             this.MedicTimer.Interval = 10000;
             this.MedicTimer.Tick += new System.EventHandler(this.MedicTimerEvent);
             // 
-            // SuperGunTimer
-            // 
-            this.SuperGunTimer.Enabled = true;
-            this.SuperGunTimer.Interval = 5000;
-            this.SuperGunTimer.Tick += new System.EventHandler(this.SuperGunTimerEvent);
-            // 
-            // LaserGunTimer
-            // 
-            this.LaserGunTimer.Enabled = false;
-            this.LaserGunTimer.Interval = 5000;
-            this.LaserGunTimer.Tick += new System.EventHandler(this.LaserGunTimerEvent);
-            // 
             // txtInventory
             // 
             this.txtInventory.AutoSize = true;
@@ -122,8 +110,15 @@
             this.txtInventory.TabIndex = 6;
             this.txtInventory.Text = "Inventory:";
             // 
+            // SuperGunTimer
+            // 
+            this.SuperGunTimer.Enabled = true;
+            this.SuperGunTimer.Interval = 5000;
+            this.SuperGunTimer.Tick += new System.EventHandler(this.SuperGunTimerEvent);
+            // 
             // player
             // 
+            this.player.Image = global::Zombie_Killer.Properties.Resources.up;
             this.player.Location = new System.Drawing.Point(435, 549);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(71, 100);
@@ -146,6 +141,11 @@
             this.laserGun.Size = new System.Drawing.Size(90, 51);
             this.laserGun.TabIndex = 7;
             this.laserGun.TabStop = false;
+            // 
+            // LaserGunTimer
+            // 
+            this.LaserGunTimer.Interval = 5000;
+            this.LaserGunTimer.Tick += new System.EventHandler(this.LaserGunTimerEvent);
             // 
             // Form1
             // 

@@ -93,6 +93,16 @@ namespace Zombie_Killer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LaserBullet {
+            get {
+                object obj = ResourceManager.GetObject("LaserBullet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LaserBulletHorizontal {
             get {
                 object obj = ResourceManager.GetObject("LaserBulletHorizontal", resourceCulture);
