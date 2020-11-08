@@ -53,6 +53,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gun.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -113,6 +115,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\medic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuperGunBulletHorizontal.png" />
+    <None Include="Resources\SuperGunBullet.png" />
+    <None Include="Resources\LaserGun.png" />
+    <None Include="Resources\LaserBulletHorizontal.png" />
+    <None Include="Resources\NormalBullet.png" />
+    <None Include="Resources\NormalBulletHorizontal.png" />
+    <Content Include="Resources\SuperGun.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

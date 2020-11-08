@@ -14,7 +14,8 @@ namespace Zombie_Killer
         // start the variable
 
         public string direction; // creating a public string called direction
-        public int speed = 20; // creating a integer called speed and assigning a value of 20
+        public int speed = 10; // creating a integer called speed and assigning a value of 20
+        string typeOfGun;
         PictureBox Bullet = new PictureBox(); // create a picture box 
         private Timer bulletTimer = new Timer(); // create a new timer called tm. 
 
@@ -23,19 +24,19 @@ namespace Zombie_Killer
 
         // end of the variables
 
-        public void MakeBullet(Form form)
+        public void MakeBullet(Form form,string typeOfGunFromGame)
         {
+            typeOfGun = typeOfGunFromGame;
             // this function will add the bullet to the game play
             // it is required to be called from the main class
-
-            Bullet.BackColor = Color.White; // set the colour white for the bullet
-            Bullet.Size = new Size(5, 5); // set the size to the bullet to 5 pixel by 5 pixel
+            //Bullet.BackColor = System.Drawing.Color.White; // set the colour white for the bullet
+            //Bullet.Image = Properties.Resources.SuperGunBullet;
+            //Bullet.Size = new Size(5, 5); // set the size to the bullet to 5 pixel by 5 pixel
             Bullet.Tag = "bullet"; // set the tag to bullet
             Bullet.Left = bulletLeft; // set bullet left 
             Bullet.Top = bulletTop; // set bullet right
             Bullet.BringToFront(); // bring the bullet to front of other objects
             form.Controls.Add(Bullet); // add the bullet to the screen
-
             bulletTimer.Interval = speed; // set the timer interval to speed
             bulletTimer.Tick += new EventHandler(BulletTimerEvent); // assignment the timer with an event
             bulletTimer.Start(); // start the timer
@@ -44,24 +45,80 @@ namespace Zombie_Killer
 
         public void BulletTimerEvent(object sender, EventArgs e)
         {
+
+            if (typeOfGun == "LaserGun")
+            {
+                speed = 25;
+            }
+            else if (typeOfGun == "SuperGun")
+            {
+                speed = 5;
+            }
             // if direction equals to left
             if (direction == "left")
             {
+                if(typeOfGun == "SuperGun"){
+                    Bullet.Image = Properties.Resources.SuperGunBulletHorizontal;
+                }
+                else if (typeOfGun == "LaserGun")
+                {
+                    Bullet.Image = Properties.Resources.LaserBulletHorizontal;
+                }
+                else 
+                {
+                    Bullet.Image = Properties.Resources.NormalBulletHorizontal;
+                }
                 Bullet.Left -= speed; // move bullet towards the left of the screen
             }
             // if direction equals right
             if (direction == "right")
             {
+                if (typeOfGun == "SuperGun")
+                {
+                    Bullet.Image = Properties.Resources.SuperGunBulletHorizontal;
+                }
+                else if (typeOfGun == "LaserGun")
+                {
+                    Bullet.Image = Properties.Resources.LaserBulletHorizontal;
+                }
+                else
+                {
+                    Bullet.Image = Properties.Resources.NormalBulletHorizontal;
+                }
                 Bullet.Left += speed; // move bullet towards the right of the screen
             }
             // if direction is up
             if (direction == "up")
             {
+                if (typeOfGun == "SuperGun")
+                {
+                    Bullet.Image = Properties.Resources.SuperGunBullet;
+                }
+                else if (typeOfGun == "LaserGun")
+                {
+                    Bullet.Image = Properties.Resources.LaserBulletHorizontal;
+                }
+                else
+                {
+                    Bullet.Image = Properties.Resources.NormalBullet;
+                }
                 Bullet.Top -= speed; // move the bullet towards top of the screen
             }
             // if direction is down
             if (direction == "down")
             {
+                if (typeOfGun == "SuperGun")
+                {
+                    Bullet.Image = Properties.Resources.SuperGunBullet;
+                }
+                else if (typeOfGun == "LaserGun")
+                {
+                    Bullet.Image = Properties.Resources.LaserBulletHorizontal;
+                }
+                else
+                {
+                    Bullet.Image = Properties.Resources.NormalBullet;
+                }
                 Bullet.Top += speed; // move the bullet bottom of the screen
             }
 

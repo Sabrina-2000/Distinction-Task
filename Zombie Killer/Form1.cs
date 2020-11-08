@@ -25,11 +25,15 @@ namespace Zombie_Killer
         int zombieSpeed = 3; // this integer will hold the speed which the zombies move in the game
         int score = 0; // this integer will hold the score the player achieved through the game
         bool gameOver = false; // this boolean is false in the beginning and it will be used when the game is finished
+        string typeOfGun = "";
         Random rnd = new Random(); // this is an instance of the random class we will use this to create a random number for this game
 
         List<PictureBox> zombiesList = new List<PictureBox>(); // list to store the zombie
         List<PictureBox> medicList = new List<PictureBox>(); // list to store the medic
+        List<PictureBox> gunList = new List<PictureBox>(); // list to store the medic
 
+        Inventory inventory = new Inventory();
+        Gun guns = new Gun();
 
         public Form1()
         {
@@ -41,6 +45,19 @@ namespace Zombie_Killer
         {   // drop the medic after every 10 seconds
             DropMedic();
         }
+
+        private void SuperGunTimerEvent(object sender, EventArgs e)
+        {   // drop the medic after every 20 seconds
+            DropSuperGun();
+            SuperGunTimer.Enabled = false;
+        }
+
+        private void LaserGunTimerEvent(object sender, EventArgs e)
+        {   // drop the medic after 30 seconds
+            DropLaserGun();
+            LaserGunTimer.Enabled = false;
+        }
+
 
         private void MainTimerEvent(object sender, EventArgs e)
         {
@@ -54,6 +71,8 @@ namespace Zombie_Killer
                 player.Image = Properties.Resources.dead;
                 GameTimer.Stop();
                 MedicTimer.Stop();
+                SuperGunTimer.Stop();
+                LaserGunTimer.Stop();
             }
 
             txtAmmo.Text = "Ammo: " + ammo;
@@ -106,6 +125,29 @@ namespace Zombie_Killer
                         {
                             playerHealth = 100; // if the player's health + 30 is greater than 100, player' health = 100
                         }
+                    }
+                }
+
+                if (x is PictureBox && (string)x.Tag == "superGun")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds)) // if the player intersects with ammor 
+                    {
+                        this.Controls.Remove(x); // remove the ammo on screen
+                        ((PictureBox)x).Dispose(); // dispose the picture box
+                        inventory.collectItem("SuperGun");// get super gun
+                        superGun.Image = Properties.Resources.SuperGun;
+                        LaserGunTimer.Enabled = true;
+                    }
+                }
+
+                if (x is PictureBox && (string)x.Tag == "laserGun")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds)) // if the player intersects with ammor 
+                    {
+                        this.Controls.Remove(x); // remove the ammo on screen
+                        ((PictureBox)x).Dispose(); // dispose the picture box
+                        inventory.collectItem("LaserGun");// get super gun
+                        laserGun.Image = Properties.Resources.LaserGun;
                     }
                 }
 
@@ -180,6 +222,21 @@ namespace Zombie_Killer
                 godown = false;
             }
 
+            if((e.KeyCode == Keys.D1) && (inventory.numberOfGun()>=1))
+            {
+                typeOfGun = guns.selectGun(1, inventory);
+            }
+
+            if ((e.KeyCode == Keys.D2) && (inventory.numberOfGun() >= 2))
+            {
+                typeOfGun = guns.selectGun(2, inventory);
+            }
+
+            if ((e.KeyCode == Keys.D3) && (inventory.numberOfGun() >= 2))
+            {
+                typeOfGun = guns.selectGun(3, inventory);
+            }
+
             if (e.KeyCode == Keys.Space && ammo > 0 && gameOver == false)
             {
                 ammo--; // deduct the ammo when player hit space key
@@ -239,7 +296,7 @@ namespace Zombie_Killer
             shootBullet.direction = direction; // set the direction to player's direction
             shootBullet.bulletLeft = player.Left + (player.Width / 2);
             shootBullet.bulletTop = player.Top + (player.Height / 2);
-            shootBullet.MakeBullet(this);
+            shootBullet.MakeBullet(this,typeOfGun);
         }
 
         private void MakeZombies()
@@ -282,6 +339,33 @@ namespace Zombie_Killer
             player.BringToFront(); // bring the player to the front
         }
 
+        private void DropSuperGun()
+        {
+            PictureBox superGun = new PictureBox();
+           
+            superGun.Image = Properties.Resources.SuperGun;
+            superGun.SizeMode = PictureBoxSizeMode.AutoSize;
+            superGun.Left = rnd.Next(15, this.ClientSize.Width - superGun.Width);
+            superGun.Top = rnd.Next(60, this.ClientSize.Height - superGun.Height);
+            superGun.Tag = "superGun";
+            this.Controls.Add(superGun); // add the medic to the screen
+            superGun.BringToFront(); // bring the medic to the front
+            player.BringToFront(); // bring the player to the front
+        }
+
+        private void DropLaserGun()
+        {
+            PictureBox laserGun = new PictureBox();
+            laserGun.Image = Properties.Resources.LaserGun;
+            laserGun.SizeMode = PictureBoxSizeMode.AutoSize;
+            laserGun.Left = rnd.Next(15, this.ClientSize.Width - laserGun.Width);
+            laserGun.Top = rnd.Next(60, this.ClientSize.Height - laserGun.Height);
+            laserGun.Tag = "laserGun";
+            this.Controls.Add(laserGun); // add the medic to the screen
+            laserGun.BringToFront(); // bring the medic to the front
+            player.BringToFront(); // bring the player to the front
+        }
+
         private void RestartGame()
         {
             player.Image = Properties.Resources.up; // set player faces up
@@ -312,8 +396,13 @@ namespace Zombie_Killer
             score = 0;
             ammo = 10;
 
+            superGun.Image = null;
+            laserGun.Image = null;
+
             GameTimer.Start();
             MedicTimer.Start();
+            SuperGunTimer.Start();
         }
+
     }
 }
