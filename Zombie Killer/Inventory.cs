@@ -9,7 +9,7 @@ namespace Zombie_Killer
     class Inventory
     {
         public string[] bag = new string[3];
-        int numberOfItem = 0;
+        public int numberOfItem = 0;
 
         public bool collectItem(string item)
         {

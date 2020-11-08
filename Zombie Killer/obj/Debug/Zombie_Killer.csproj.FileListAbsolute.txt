@@ -20,3 +20,5 @@ C:\Users\user\Documents\GitHub\Distinction-Task\Zombie Killer\bin\Debug\Zombie K
 C:\Users\user\Documents\GitHub\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.pdb
 C:\Users\user\Documents\GitHub\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Menu.resources
 C:\Users\user\Documents\GitHub\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Scoreboard.resources
+C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Menu.resources
+C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Scoreboard.resources

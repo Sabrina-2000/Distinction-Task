@@ -31,6 +31,7 @@ namespace Zombie_Killer
         string path = "../../Text/Scoreboard.txt";
         List<PictureBox> zombiesList = new List<PictureBox>(); // list to store the zombie
         List<PictureBox> medicList = new List<PictureBox>(); // list to store the medic
+        List<PictureBox> gunList = new List<PictureBox>(); // list to store the medic
         Inventory inventory = new Inventory();
         Gun guns = new Gun();
 
@@ -350,6 +351,7 @@ namespace Zombie_Killer
             superGun.Left = rnd.Next(15, this.ClientSize.Width - superGun.Width);
             superGun.Top = rnd.Next(60, this.ClientSize.Height - superGun.Height);
             superGun.Tag = "superGun";
+            gunList.Add(superGun);
             this.Controls.Add(superGun); // add the medic to the screen
             superGun.BringToFront(); // bring the medic to the front
             player.BringToFront(); // bring the player to the front
@@ -363,6 +365,7 @@ namespace Zombie_Killer
             laserGun.Left = rnd.Next(15, this.ClientSize.Width - laserGun.Width);
             laserGun.Top = rnd.Next(60, this.ClientSize.Height - laserGun.Height);
             laserGun.Tag = "laserGun";
+            gunList.Add(laserGun);
             this.Controls.Add(laserGun); // add the medic to the screen
             laserGun.BringToFront(); // bring the medic to the front
             player.BringToFront(); // bring the player to the front
@@ -384,10 +387,18 @@ namespace Zombie_Killer
             }
             medicList.Clear(); // clear the medicList
 
+            foreach (PictureBox i in gunList)
+            {
+                this.Controls.Remove(i); // remove all the medics on the screen
+            }
+            gunList.Clear();
+
             for (int i = 0; i < 3; i++)
             {
                 MakeZombies(); // create 3 zombies on the screen
             }
+
+
 
             goup = false;
             godown = false;
@@ -400,6 +411,9 @@ namespace Zombie_Killer
 
             superGun.Image = null;
             laserGun.Image = null;
+
+            Array.Clear(inventory.bag, 0, inventory.bag.Length);
+            inventory.numberOfItem = 0;
 
             GameTimer.Start();
             MedicTimer.Start();
