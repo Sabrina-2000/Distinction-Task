@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -27,11 +28,9 @@ namespace Zombie_Killer
         bool gameOver = false; // this boolean is false in the beginning and it will be used when the game is finished
         string typeOfGun = "";
         Random rnd = new Random(); // this is an instance of the random class we will use this to create a random number for this game
-
+        string path = "../../Text/Scoreboard.txt";
         List<PictureBox> zombiesList = new List<PictureBox>(); // list to store the zombie
         List<PictureBox> medicList = new List<PictureBox>(); // list to store the medic
-        List<PictureBox> gunList = new List<PictureBox>(); // list to store the medic
-
         Inventory inventory = new Inventory();
         Gun guns = new Gun();
 
@@ -73,6 +72,9 @@ namespace Zombie_Killer
                 MedicTimer.Stop();
                 SuperGunTimer.Stop();
                 LaserGunTimer.Stop();
+                StreamWriter sw = File.AppendText(path);
+                sw.WriteLine("Kills: " + score.ToString());
+                sw.Close();
             }
 
             txtAmmo.Text = "Ammo: " + ammo;
