@@ -81,7 +81,6 @@ namespace Zombie_Killer
             }
             else
             {
-                healthBar.Value = playerHealth;
                 gameOver = true;
 
 
@@ -205,6 +204,10 @@ namespace Zombie_Killer
                         else
                         {
                             playerHealth -= 1; //player's health minus by 1
+                            if((playerHealth - 1) == 0) //if player's heath minus 1 is equal 0, player's health equal 0
+                            {
+                                playerHealth = 0;
+                            }
                         }
                     }
                     // let the zombie chase the player
@@ -496,7 +499,6 @@ namespace Zombie_Killer
                 player.Image = Properties.Resources.up; // set player faces up
             }
             
-
             foreach(PictureBox i in zombiesList)
             {
                 this.Controls.Remove(i); // remove all the zombies on the screen

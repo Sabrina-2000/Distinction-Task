@@ -42,7 +42,7 @@
             this.Scoreboard.AutoSize = true;
             this.Scoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Scoreboard.ForeColor = System.Drawing.Color.White;
-            this.Scoreboard.Location = new System.Drawing.Point(344, 543);
+            this.Scoreboard.Location = new System.Drawing.Point(386, 535);
             this.Scoreboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Scoreboard.Name = "Scoreboard";
             this.Scoreboard.Size = new System.Drawing.Size(164, 31);
@@ -58,7 +58,7 @@
             this.Character.AutoSize = true;
             this.Character.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Character.ForeColor = System.Drawing.Color.White;
-            this.Character.Location = new System.Drawing.Point(356, 469);
+            this.Character.Location = new System.Drawing.Point(397, 459);
             this.Character.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(143, 31);
@@ -75,7 +75,7 @@
             this.Play.AutoSize = true;
             this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play.ForeColor = System.Drawing.Color.White;
-            this.Play.Location = new System.Drawing.Point(392, 391);
+            this.Play.Location = new System.Drawing.Point(433, 383);
             this.Play.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(71, 31);
@@ -89,7 +89,7 @@
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(136, 113);
+            this.Title.Location = new System.Drawing.Point(151, 112);
             this.Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(615, 108);
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(884, 701);
+            this.ClientSize = new System.Drawing.Size(924, 661);
             this.Controls.Add(this.Scoreboard);
             this.Controls.Add(this.Character);
             this.Controls.Add(this.Play);

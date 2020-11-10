@@ -13,23 +13,23 @@ namespace Zombie_Killer
 {
     public partial class Scoreboard : Form
     {
-        string path = "../../Text/Scoreboard.txt";
+        string path = "../../Text/Scoreboard.txt"; //The path of the scoreboard.txt
         public Scoreboard()
         {
             InitializeComponent();
-            DisplayScore();
+            DisplayScore(); 
         }
 
         private void DisplayScore()
         {
-            using (StreamReader file = new StreamReader(path))
+            using (StreamReader file = new StreamReader(path)) 
             {
                 string ln;
                 while ((ln = file.ReadLine()) != null)
                 {
-                    kills.Text += ln + "\n";
+                    kills.Text += ln + "\n"; //Write the text to the form
                 }
-                file.Close();
+                file.Close(); //Close the file
             }
         }
     }
