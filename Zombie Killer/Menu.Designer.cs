@@ -36,37 +36,52 @@
             // 
             // Scoreboard
             // 
+            this.Scoreboard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Scoreboard.AutoSize = true;
-            this.Scoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Scoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Scoreboard.ForeColor = System.Drawing.Color.White;
-            this.Scoreboard.Location = new System.Drawing.Point(416, 506);
+            this.Scoreboard.Location = new System.Drawing.Point(344, 543);
+            this.Scoreboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Scoreboard.Name = "Scoreboard";
-            this.Scoreboard.Size = new System.Drawing.Size(133, 25);
+            this.Scoreboard.Size = new System.Drawing.Size(164, 31);
             this.Scoreboard.TabIndex = 7;
             this.Scoreboard.Text = "Scoreboard";
             this.Scoreboard.Click += new System.EventHandler(this.Scoreboard_Click);
             // 
             // Character
             // 
+            this.Character.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Character.AutoSize = true;
-            this.Character.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Character.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Character.ForeColor = System.Drawing.Color.White;
-            this.Character.Location = new System.Drawing.Point(425, 467);
+            this.Character.Location = new System.Drawing.Point(356, 469);
+            this.Character.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Character.Name = "Character";
-            this.Character.Size = new System.Drawing.Size(115, 25);
+            this.Character.Size = new System.Drawing.Size(143, 31);
             this.Character.TabIndex = 6;
             this.Character.Text = "Character";
+            this.Character.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Character.Click += new System.EventHandler(this.Character_Click);
             // 
             // Play
             // 
+            this.Play.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Play.AutoSize = true;
-            this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play.ForeColor = System.Drawing.Color.White;
-            this.Play.Location = new System.Drawing.Point(451, 424);
+            this.Play.Location = new System.Drawing.Point(392, 391);
+            this.Play.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(58, 25);
+            this.Play.Size = new System.Drawing.Size(71, 31);
             this.Play.TabIndex = 5;
             this.Play.Text = "Play";
+            this.Play.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Play.Click += new System.EventHandler(this.Play_Click);
             // 
             // Title
@@ -74,7 +89,8 @@
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(155, 129);
+            this.Title.Location = new System.Drawing.Point(136, 113);
+            this.Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(615, 108);
             this.Title.TabIndex = 4;
@@ -82,14 +98,14 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(924, 661);
+            this.ClientSize = new System.Drawing.Size(884, 701);
             this.Controls.Add(this.Scoreboard);
             this.Controls.Add(this.Character);
             this.Controls.Add(this.Play);
             this.Controls.Add(this.Title);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Menu";
             this.Text = "Menu";
             this.ResumeLayout(false);

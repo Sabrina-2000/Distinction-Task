@@ -22,3 +22,16 @@ C:\Users\user\Documents\GitHub\Distinction-Task\Zombie Killer\obj\Debug\Zombie_K
 C:\Users\user\Documents\GitHub\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Scoreboard.resources
 C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Menu.resources
 C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Scoreboard.resources
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.exe.config
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.exe
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.pdb
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csprojAssemblyReference.cache
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Form1.resources
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Menu.resources
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Properties.Resources.resources
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Scoreboard.resources
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csproj.GenerateResource.cache
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csproj.CoreCompileInputs.cache
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.exe
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.pdb
+D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.ChooseCharacter.resources

@@ -37,10 +37,13 @@
             this.MedicTimer = new System.Windows.Forms.Timer(this.components);
             this.txtInventory = new System.Windows.Forms.Label();
             this.SuperGunTimer = new System.Windows.Forms.Timer(this.components);
+            this.LaserGunTimer = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
             this.superGun = new System.Windows.Forms.PictureBox();
             this.laserGun = new System.Windows.Forms.PictureBox();
-            this.LaserGunTimer = new System.Windows.Forms.Timer(this.components);
+            this.shieldTimer = new System.Windows.Forms.Timer(this.components);
+            this.shield = new System.Windows.Forms.Label();
+            this.shieldBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superGun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laserGun)).BeginInit();
@@ -116,10 +119,14 @@
             this.SuperGunTimer.Interval = 5000;
             this.SuperGunTimer.Tick += new System.EventHandler(this.SuperGunTimerEvent);
             // 
+            // LaserGunTimer
+            // 
+            this.LaserGunTimer.Interval = 5000;
+            this.LaserGunTimer.Tick += new System.EventHandler(this.LaserGunTimerEvent);
+            // 
             // player
             // 
-            this.player.Image = global::Zombie_Killer.Properties.Resources.up;
-            this.player.Location = new System.Drawing.Point(435, 549);
+            this.player.Location = new System.Drawing.Point(419, 549);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(71, 100);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -142,10 +149,29 @@
             this.laserGun.TabIndex = 7;
             this.laserGun.TabStop = false;
             // 
-            // LaserGunTimer
+            // shieldTimer
             // 
-            this.LaserGunTimer.Interval = 5000;
-            this.LaserGunTimer.Tick += new System.EventHandler(this.LaserGunTimerEvent);
+            this.shieldTimer.Enabled = true;
+            this.shieldTimer.Interval = 35000;
+            this.shieldTimer.Tick += new System.EventHandler(this.ShieldTimerEvent);
+            // 
+            // shield
+            // 
+            this.shield.AutoSize = true;
+            this.shield.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shield.ForeColor = System.Drawing.Color.White;
+            this.shield.Location = new System.Drawing.Point(655, 42);
+            this.shield.Name = "shield";
+            this.shield.Size = new System.Drawing.Size(75, 24);
+            this.shield.TabIndex = 9;
+            this.shield.Text = "Shield:";
+            // 
+            // shieldBar
+            // 
+            this.shieldBar.Location = new System.Drawing.Point(729, 42);
+            this.shieldBar.Name = "shieldBar";
+            this.shieldBar.Size = new System.Drawing.Size(183, 23);
+            this.shieldBar.TabIndex = 10;
             // 
             // Form1
             // 
@@ -153,6 +179,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(924, 661);
+            this.Controls.Add(this.shieldBar);
+            this.Controls.Add(this.shield);
             this.Controls.Add(this.txtInventory);
             this.Controls.Add(this.player);
             this.Controls.Add(this.healthBar);
@@ -163,6 +191,7 @@
             this.Controls.Add(this.laserGun);
             this.Name = "Form1";
             this.Text = "Zombie Killer";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
@@ -187,6 +216,9 @@
         private System.Windows.Forms.Timer SuperGunTimer;
         private System.Windows.Forms.PictureBox superGun;
         private System.Windows.Forms.Timer LaserGunTimer;
+        private System.Windows.Forms.Timer shieldTimer;
+        private System.Windows.Forms.Label shield;
+        private System.Windows.Forms.ProgressBar shieldBar;
     }
 }
 

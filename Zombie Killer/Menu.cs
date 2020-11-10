@@ -30,5 +30,13 @@ namespace Zombie_Killer
             Scoreboard board = new Scoreboard();
             board.Show();
         }
+
+        // If the user click the Character option in the menu then it will show the Character form
+        private void Character_Click(object sender, EventArgs e)
+        {
+            ChooseCharacter character = new ChooseCharacter();
+            character.Show();
+        }
+
     }
 }
