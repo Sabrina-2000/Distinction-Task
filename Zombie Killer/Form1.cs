@@ -36,6 +36,7 @@ namespace Zombie_Killer
         List<PictureBox> medicList = new List<PictureBox>();    // list to store the medic
         List<PictureBox> gunList = new List<PictureBox>();      // list to store the gun
         List<PictureBox> shieldList = new List<PictureBox>();   // list to store the shield
+        List<PictureBox> grenadeList = new List<PictureBox>();   // list to store the grenade
 
         Inventory inventory = new Inventory();
         Gun guns = new Gun();
@@ -69,6 +70,12 @@ namespace Zombie_Killer
             DropShield();
         }
 
+        private void GrenadeTimerEvent(object sender, EventArgs e)
+        {
+            DropGrenade();
+            GrenadeTimer.Enabled = false;
+        }
+
 
         private void MainTimerEvent(object sender, EventArgs e)
         {
@@ -100,6 +107,7 @@ namespace Zombie_Killer
                 SuperGunTimer.Stop();
                 LaserGunTimer.Stop();
                 shieldTimer.Stop();
+                GrenadeTimer.Stop();
 
                 StreamWriter sw = File.AppendText(path);
                 sw.WriteLine("Kills: " + score.ToString());
@@ -192,6 +200,18 @@ namespace Zombie_Killer
                     }
                 }
 
+                if (x is PictureBox && (string)x.Tag == "grenades")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds)) // if the player intersects with grenade 
+                    {
+                        this.Controls.Remove(x); // remove the grenade on screen
+                        grenadeList.Remove((PictureBox)x); // remove the medic from the grenade list
+                        ((PictureBox)x).Dispose(); // dispose the picture box
+                        inventory.collectItem("Grenades");// get grenades
+                        grenade.Image = Properties.Resources.grenade;
+                    }
+                }
+
                 if (x is PictureBox && (string)x.Tag == "zombie")
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds)) // if the player's intersects with zombie
@@ -250,6 +270,26 @@ namespace Zombie_Killer
                         }
                     }
                 }
+
+                //throw grenade
+                /*foreach (Control k in this.Controls)
+                {
+                    if (k is PictureBox && (string)k.Tag == "grenades" && x is PictureBox && (string)x.Tag == "zombie")
+                    {
+                        //need to add range for the bound(havent done)
+                        if (x.Bounds.IntersectsWith(k.Bounds)) // if grenade are intersect with zombies
+                        {
+                            score++; // score plus 1
+
+                            this.Controls.Remove(k); // remove the grenade on screen
+                            ((PictureBox)k).Dispose(); // dispose the picture box
+                            this.Controls.Remove(x); // remove the zombie on screen
+                            ((PictureBox)x).Dispose(); // dispose the picture box
+                            zombiesList.Remove(((PictureBox)x)); // remove the zombie from the list
+                            MakeZombies(); // create the zombies
+                        }
+                    }
+                }*/
             }
         }
 
@@ -289,6 +329,8 @@ namespace Zombie_Killer
             {
                 typeOfGun = guns.selectGun(3, inventory);
             }
+            //need to add key to take grenade from inventory(havent done)
+            //add key to throw grenade(havent done)
 
             if (e.KeyCode == Keys.Space && ammo > 0 && gameOver == false)
             {
@@ -484,6 +526,19 @@ namespace Zombie_Killer
             shield.BringToFront();      // Bring the shield to the front
             player.BringToFront();      // Bring the player to the front
 
+        }
+
+        private void DropGrenade()
+        {
+            PictureBox grenade = new PictureBox();
+            grenade.Image = Properties.Resources.grenade;
+            grenade.SizeMode = PictureBoxSizeMode.AutoSize;
+            grenade.Left = rnd.Next(15, this.ClientSize.Width - grenade.Width);
+            grenade.Top = rnd.Next(60, this.ClientSize.Height - grenade.Height);
+            grenade.Tag = "grenades";
+            this.Controls.Add(grenade); // add grenade to the screen
+            grenade.BringToFront(); // bring grenade to the front
+            player.BringToFront(); // bring the player to the front
         }
 
         private void RestartGame()

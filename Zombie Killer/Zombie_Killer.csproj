@@ -143,6 +143,7 @@
     <None Include="Resources\down.png" />
     <None Include="Resources\right.png" />
     <None Include="Resources\up.png" />
+    <None Include="Resources\grenade.png" />
     <Content Include="Text\Scoreboard.txt" />
     <None Include="Resources\SuperGunBulletHorizontal.png" />
     <None Include="Resources\SuperGunBullet.png" />
