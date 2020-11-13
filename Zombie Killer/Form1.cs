@@ -31,6 +31,8 @@ namespace Zombie_Killer
         string typeOfGun = "";
         Random rnd = new Random();                              // this is an instance of the random class we will use this to create a random number for this game
         string path = "../../Text/Scoreboard.txt";
+        bool isGrenadeCollected = false;                        //this bollean is false initially until the player collect the grenade
+        int distance = 300;                                     //distance of throwing
 
         List<PictureBox> zombiesList = new List<PictureBox>();  // list to store the zombie
         List<PictureBox> medicList = new List<PictureBox>();    // list to store the medic
@@ -209,6 +211,8 @@ namespace Zombie_Killer
                         ((PictureBox)x).Dispose(); // dispose the picture box
                         inventory.collectItem("Grenades");// get grenades
                         grenade.Image = Properties.Resources.grenade;
+                        grenade.Visible = true;
+                        isGrenadeCollected = true;
                     }
                 }
 
@@ -272,15 +276,14 @@ namespace Zombie_Killer
                 }
 
                 //throw grenade
-                /*foreach (Control k in this.Controls)
+                foreach (Control k in this.Controls)
                 {
-                    if (k is PictureBox && (string)k.Tag == "grenades" && x is PictureBox && (string)x.Tag == "zombie")
+                    if (k is PictureBox && (string)k.Tag == "explosion" && x is PictureBox && (string)x.Tag == "zombie")
                     {
-                        //need to add range for the bound(havent done)
-                        if (x.Bounds.IntersectsWith(k.Bounds)) // if grenade are intersect with zombies
+                        //need to add range for the bound(havent done, now can only intersect with 1 zombie)
+                        if (x.Bounds.IntersectsWith(k.Bounds)) // if grenade range are intersect with zombies
                         {
                             score++; // score plus 1
-
                             this.Controls.Remove(k); // remove the grenade on screen
                             ((PictureBox)k).Dispose(); // dispose the picture box
                             this.Controls.Remove(x); // remove the zombie on screen
@@ -289,7 +292,7 @@ namespace Zombie_Killer
                             MakeZombies(); // create the zombies
                         }
                     }
-                }*/
+                }
             }
         }
 
@@ -329,8 +332,12 @@ namespace Zombie_Killer
             {
                 typeOfGun = guns.selectGun(3, inventory);
             }
-            //need to add key to take grenade from inventory(havent done)
-            //add key to throw grenade(havent done)
+            //take grenade from inventory and throw grenade
+            if ((e.KeyCode == Keys.D4) && (isGrenadeCollected == true))
+            {
+                grenade.Visible = false;
+                GrenadeExplosion(facing);
+            }
 
             if (e.KeyCode == Keys.Space && ammo > 0 && gameOver == false)
             {
@@ -432,6 +439,40 @@ namespace Zombie_Killer
             shootBullet.bulletLeft = player.Left + (player.Width / 2);
             shootBullet.bulletTop = player.Top + (player.Height / 2);
             shootBullet.MakeBullet(this,typeOfGun);
+        }
+
+        //explore image is not able to display only, the method is working if try with other image
+        private void GrenadeExplosion(string direction)
+        {
+            Explosion grenadeExplosion = new Explosion(); // create the explosion
+            grenadeExplosion.direction = direction; // set the direction to player's direction
+            // if direction equals to left
+            if (direction == "left")
+            {
+                grenadeExplosion.explosionLeft = player.Left + (player.Width / 2) - distance;
+                grenadeExplosion.explosionTop = player.Top + (player.Height / 2);
+            }
+            // if direction equals right
+            else if (direction == "right")
+            {
+                grenadeExplosion.explosionLeft = player.Left + (player.Width / 2) + distance;
+                grenadeExplosion.explosionTop = player.Top + (player.Height / 2);
+            }
+            // if direction is up
+            else if (direction == "up")
+            {
+                grenadeExplosion.explosionLeft = player.Left + (player.Width / 2);
+                grenadeExplosion.explosionTop = player.Top + (player.Height / 2) - distance;
+            }
+            // if direction is down
+            else if (direction == "down")
+            {
+                grenadeExplosion.explosionLeft = player.Left + (player.Width / 2);
+                grenadeExplosion.explosionTop = player.Top + (player.Height / 2) + distance;
+            }
+            grenadeExplosion.MakeExplosion(this);
+            isGrenadeCollected = false;
+            DropGrenade();
         }
 
         private void MakeZombies()
@@ -604,6 +645,7 @@ namespace Zombie_Killer
             MedicTimer.Start();
             SuperGunTimer.Start();
             shieldTimer.Start();
+            GrenadeTimer.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)

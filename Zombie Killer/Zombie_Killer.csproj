@@ -53,6 +53,7 @@
     <Compile Include="ChooseCharacter.Designer.cs">
       <DependentUpon>ChooseCharacter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Explosion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +145,7 @@
     <None Include="Resources\right.png" />
     <None Include="Resources\up.png" />
     <None Include="Resources\grenade.png" />
+    <None Include="Resources\explosion.png" />
     <Content Include="Text\Scoreboard.txt" />
     <None Include="Resources\SuperGunBulletHorizontal.png" />
     <None Include="Resources\SuperGunBullet.png" />

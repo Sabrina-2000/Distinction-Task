@@ -36,3 +36,16 @@ D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMEN
 D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.pdb
 D:\SWINBURNE UNIVERSITY OF TECHNOLOGY SARAWAK\Year 2 Sem 1\SWE20001 - DEVELOPMENT PROJECT 1 TOOLS AND PRACTICES\Distinction Task\Zombie Game\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.ChooseCharacter.resources
 C:\Users\user\Documents\GitHub\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.ChooseCharacter.resources
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.exe.config
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.exe
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.pdb
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csprojAssemblyReference.cache
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.ChooseCharacter.resources
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Form1.resources
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Menu.resources
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Properties.Resources.resources
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Scoreboard.resources
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csproj.GenerateResource.cache
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csproj.CoreCompileInputs.cache
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.exe
+C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.pdb

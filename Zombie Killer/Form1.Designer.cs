@@ -91,7 +91,7 @@
             // healthBar
             // 
             this.healthBar.Location = new System.Drawing.Point(972, 16);
-            this.healthBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.healthBar.Margin = new System.Windows.Forms.Padding(4);
             this.healthBar.Name = "healthBar";
             this.healthBar.Size = new System.Drawing.Size(244, 28);
             this.healthBar.TabIndex = 3;
@@ -135,7 +135,7 @@
             // player
             // 
             this.player.Location = new System.Drawing.Point(559, 676);
-            this.player.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.player.Margin = new System.Windows.Forms.Padding(4);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(71, 100);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -145,7 +145,7 @@
             // superGun
             // 
             this.superGun.Location = new System.Drawing.Point(559, 1);
-            this.superGun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.superGun.Margin = new System.Windows.Forms.Padding(4);
             this.superGun.Name = "superGun";
             this.superGun.Size = new System.Drawing.Size(116, 63);
             this.superGun.TabIndex = 8;
@@ -154,7 +154,7 @@
             // laserGun
             // 
             this.laserGun.Location = new System.Drawing.Point(671, 1);
-            this.laserGun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.laserGun.Margin = new System.Windows.Forms.Padding(4);
             this.laserGun.Name = "laserGun";
             this.laserGun.Size = new System.Drawing.Size(120, 63);
             this.laserGun.TabIndex = 7;
@@ -181,13 +181,14 @@
             // shieldBar
             // 
             this.shieldBar.Location = new System.Drawing.Point(972, 52);
-            this.shieldBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.shieldBar.Margin = new System.Windows.Forms.Padding(4);
             this.shieldBar.Name = "shieldBar";
             this.shieldBar.Size = new System.Drawing.Size(244, 28);
             this.shieldBar.TabIndex = 10;
             // 
             // GrenadeTimer
             // 
+            this.GrenadeTimer.Enabled = true;
             this.GrenadeTimer.Interval = 9000;
             this.GrenadeTimer.Tick += new System.EventHandler(this.GrenadeTimerEvent);
             // 
@@ -198,6 +199,7 @@
             this.grenade.Size = new System.Drawing.Size(77, 65);
             this.grenade.TabIndex = 11;
             this.grenade.TabStop = false;
+            this.grenade.Visible = false;
             // 
             // Form1
             // 
@@ -216,7 +218,7 @@
             this.Controls.Add(this.txtAmmo);
             this.Controls.Add(this.superGun);
             this.Controls.Add(this.laserGun);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Zombie Killer";
             this.Load += new System.EventHandler(this.Form1_Load);
