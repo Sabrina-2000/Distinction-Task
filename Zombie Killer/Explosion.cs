@@ -33,6 +33,7 @@ namespace Zombie_Killer
         private void ExplosionTimerEvent(object sender, EventArgs e)
         {
             explosion.Image = Properties.Resources.explosion;
+            explosion.SizeMode = PictureBoxSizeMode.AutoSize;
 
             // if the explosion is less the 16 pixel to the left OR
             // if the explosion is more than 860 pixels to the right OR
