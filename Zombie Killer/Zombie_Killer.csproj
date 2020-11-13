@@ -146,6 +146,10 @@
     <None Include="Resources\up.png" />
     <None Include="Resources\grenade.png" />
     <None Include="Resources\explosion.png" />
+    <Content Include="Sound\gunshot.wav" />
+    <Content Include="Sound\pickMedic.wav" />
+    <Content Include="Sound\reload.wav" />
+    <Content Include="Text\date.txt" />
     <Content Include="Text\Scoreboard.txt" />
     <None Include="Resources\SuperGunBulletHorizontal.png" />
     <None Include="Resources\SuperGunBullet.png" />

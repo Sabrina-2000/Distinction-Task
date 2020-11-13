@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Windows.Forms;
 
@@ -30,7 +31,8 @@ namespace Zombie_Killer
         bool gameOver = false;                                  // this boolean is false in the beginning and it will be used when the game is finished
         string typeOfGun = "";
         Random rnd = new Random();                              // this is an instance of the random class we will use this to create a random number for this game
-        string path = "../../Text/Scoreboard.txt";
+        string path = "../../Text/Scoreboard.txt";              //The path of the Scoreboard.txt
+        string path2 = "../../Text/date.txt";                   //The path of the date.txt
         bool isGrenadeCollected = false;                        //this bollean is false initially until the player collect the grenade
         int distance = 300;                                     //distance of throwing
 
@@ -114,6 +116,11 @@ namespace Zombie_Killer
                 StreamWriter sw = File.AppendText(path);
                 sw.WriteLine("Kills: " + score.ToString());
                 sw.Close();
+
+                DateTime thisDay = DateTime.Now;
+                StreamWriter dt = File.AppendText(path2);
+                dt.WriteLine(thisDay.ToString());
+                dt.Close();
             }
 
             txtAmmo.Text = "Ammo: " + ammo;
@@ -145,6 +152,8 @@ namespace Zombie_Killer
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds)) // if the player intersects with ammo
                     {
+                        SoundPlayer reload = new SoundPlayer("../../Sound/reload.wav");
+                        reload.Play(); // play reload sound effect
                         this.Controls.Remove(x); // remove the ammo on screen
                         ((PictureBox)x).Dispose(); // dispose the picture box
                         ammo += 5; // add the ammo to 5
@@ -155,6 +164,8 @@ namespace Zombie_Killer
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds)) // if the player intersects with medic 
                     {
+                        SoundPlayer pickMedic = new SoundPlayer("../../Sound/pickMedic.wav");
+                        pickMedic.Play(); // play the pickMedic sound effect
                         this.Controls.Remove(x); // remove the medic on screen
                         medicList.Remove((PictureBox)x); // remove the medic from the medic list
                         ((PictureBox)x).Dispose(); // dispose the picture box
@@ -196,6 +207,8 @@ namespace Zombie_Killer
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds)) // If the player intersects with the shield
                     {
+                        SoundPlayer pickMedic = new SoundPlayer("../../Sound/pickMedic.wav");
+                        pickMedic.Play(); // play the pickMedic sound
                         this.Controls.Remove(x);                // Remove the shield on the screen
                         ((PictureBox)x).Dispose();              // Dispose the picture box
                         playerShield = 100;                     // If the player grab the shield then it will restore the player's shield until full
@@ -341,6 +354,8 @@ namespace Zombie_Killer
 
             if (e.KeyCode == Keys.Space && ammo > 0 && gameOver == false)
             {
+                SoundPlayer shoot = new SoundPlayer("../../Sound/gunshot.wav");
+                shoot.Play(); // play the shoot sound
                 ammo--; // deduct the ammo when player hit space key
                 ShootBullet(facing);
 

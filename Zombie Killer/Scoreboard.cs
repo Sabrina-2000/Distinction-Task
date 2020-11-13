@@ -14,6 +14,7 @@ namespace Zombie_Killer
     public partial class Scoreboard : Form
     {
         string path = "../../Text/Scoreboard.txt"; //The path of the scoreboard.txt
+        string path2 = "../../Text/date.txt"; //The path of the date.txt
         public Scoreboard()
         {
             InitializeComponent();
@@ -28,6 +29,16 @@ namespace Zombie_Killer
                 while ((ln = file.ReadLine()) != null)
                 {
                     kills.Text += ln + "\n"; //Write the text to the form
+                }
+                file.Close(); //Close the file
+            }
+
+            using (StreamReader file = new StreamReader(path2))
+            {
+                string ln;
+                while ((ln = file.ReadLine()) != null)
+                {
+                    date.Text += ln + "\n"; //Write the text to the form
                 }
                 file.Close(); //Close the file
             }

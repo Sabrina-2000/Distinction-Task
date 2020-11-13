@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.kills = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -45,11 +46,20 @@
             // kills
             // 
             this.kills.AutoSize = true;
-            this.kills.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kills.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kills.Location = new System.Drawing.Point(272, 153);
             this.kills.Name = "kills";
-            this.kills.Size = new System.Drawing.Size(0, 29);
+            this.kills.Size = new System.Drawing.Size(0, 20);
             this.kills.TabIndex = 2;
+            // 
+            // date
+            // 
+            this.date.AutoSize = true;
+            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.Location = new System.Drawing.Point(360, 153);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(0, 20);
+            this.date.TabIndex = 3;
             // 
             // Scoreboard
             // 
@@ -57,6 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.date);
             this.Controls.Add(this.kills);
             this.Controls.Add(this.label1);
             this.Name = "Scoreboard";
@@ -70,5 +81,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label kills;
+        private System.Windows.Forms.Label date;
     }
 }

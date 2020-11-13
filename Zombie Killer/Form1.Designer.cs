@@ -57,10 +57,9 @@
             this.txtAmmo.AutoSize = true;
             this.txtAmmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmmo.ForeColor = System.Drawing.Color.White;
-            this.txtAmmo.Location = new System.Drawing.Point(17, 16);
-            this.txtAmmo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtAmmo.Location = new System.Drawing.Point(13, 13);
             this.txtAmmo.Name = "txtAmmo";
-            this.txtAmmo.Size = new System.Drawing.Size(114, 29);
+            this.txtAmmo.Size = new System.Drawing.Size(93, 24);
             this.txtAmmo.TabIndex = 0;
             this.txtAmmo.Text = "Ammo: 0";
             // 
@@ -69,10 +68,9 @@
             this.txtScore.AutoSize = true;
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(216, 15);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtScore.Location = new System.Drawing.Point(162, 12);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(92, 29);
+            this.txtScore.Size = new System.Drawing.Size(71, 24);
             this.txtScore.TabIndex = 1;
             this.txtScore.Text = "Kills: 0";
             // 
@@ -81,19 +79,17 @@
             this.Health.AutoSize = true;
             this.Health.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Health.ForeColor = System.Drawing.Color.White;
-            this.Health.Location = new System.Drawing.Point(873, 16);
-            this.Health.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Health.Location = new System.Drawing.Point(655, 13);
             this.Health.Name = "Health";
-            this.Health.Size = new System.Drawing.Size(95, 29);
+            this.Health.Size = new System.Drawing.Size(76, 24);
             this.Health.TabIndex = 2;
             this.Health.Text = "Health:";
             // 
             // healthBar
             // 
-            this.healthBar.Location = new System.Drawing.Point(972, 16);
-            this.healthBar.Margin = new System.Windows.Forms.Padding(4);
+            this.healthBar.Location = new System.Drawing.Point(729, 13);
             this.healthBar.Name = "healthBar";
-            this.healthBar.Size = new System.Drawing.Size(244, 28);
+            this.healthBar.Size = new System.Drawing.Size(183, 23);
             this.healthBar.TabIndex = 3;
             this.healthBar.Value = 100;
             // 
@@ -114,10 +110,9 @@
             this.txtInventory.AutoSize = true;
             this.txtInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInventory.ForeColor = System.Drawing.Color.White;
-            this.txtInventory.Location = new System.Drawing.Point(428, 16);
-            this.txtInventory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtInventory.Location = new System.Drawing.Point(299, 13);
             this.txtInventory.Name = "txtInventory";
-            this.txtInventory.Size = new System.Drawing.Size(125, 29);
+            this.txtInventory.Size = new System.Drawing.Size(101, 24);
             this.txtInventory.TabIndex = 6;
             this.txtInventory.Text = "Inventory:";
             // 
@@ -134,8 +129,7 @@
             // 
             // player
             // 
-            this.player.Location = new System.Drawing.Point(559, 676);
-            this.player.Margin = new System.Windows.Forms.Padding(4);
+            this.player.Location = new System.Drawing.Point(423, 508);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(71, 100);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -144,19 +138,17 @@
             // 
             // superGun
             // 
-            this.superGun.Location = new System.Drawing.Point(559, 1);
-            this.superGun.Margin = new System.Windows.Forms.Padding(4);
+            this.superGun.Location = new System.Drawing.Point(397, 1);
             this.superGun.Name = "superGun";
-            this.superGun.Size = new System.Drawing.Size(116, 63);
+            this.superGun.Size = new System.Drawing.Size(87, 51);
             this.superGun.TabIndex = 8;
             this.superGun.TabStop = false;
             // 
             // laserGun
             // 
-            this.laserGun.Location = new System.Drawing.Point(671, 1);
-            this.laserGun.Margin = new System.Windows.Forms.Padding(4);
+            this.laserGun.Location = new System.Drawing.Point(481, 1);
             this.laserGun.Name = "laserGun";
-            this.laserGun.Size = new System.Drawing.Size(120, 63);
+            this.laserGun.Size = new System.Drawing.Size(90, 51);
             this.laserGun.TabIndex = 7;
             this.laserGun.TabStop = false;
             // 
@@ -171,19 +163,17 @@
             this.shield.AutoSize = true;
             this.shield.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shield.ForeColor = System.Drawing.Color.White;
-            this.shield.Location = new System.Drawing.Point(873, 52);
-            this.shield.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.shield.Location = new System.Drawing.Point(655, 42);
             this.shield.Name = "shield";
-            this.shield.Size = new System.Drawing.Size(95, 29);
+            this.shield.Size = new System.Drawing.Size(75, 24);
             this.shield.TabIndex = 9;
             this.shield.Text = "Shield:";
             // 
             // shieldBar
             // 
-            this.shieldBar.Location = new System.Drawing.Point(972, 52);
-            this.shieldBar.Margin = new System.Windows.Forms.Padding(4);
+            this.shieldBar.Location = new System.Drawing.Point(729, 42);
             this.shieldBar.Name = "shieldBar";
-            this.shieldBar.Size = new System.Drawing.Size(244, 28);
+            this.shieldBar.Size = new System.Drawing.Size(183, 23);
             this.shieldBar.TabIndex = 10;
             // 
             // GrenadeTimer
@@ -194,19 +184,20 @@
             // 
             // grenade
             // 
-            this.grenade.Location = new System.Drawing.Point(789, -1);
+            this.grenade.Location = new System.Drawing.Point(570, -1);
+            this.grenade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grenade.Name = "grenade";
-            this.grenade.Size = new System.Drawing.Size(77, 65);
+            this.grenade.Size = new System.Drawing.Size(58, 53);
             this.grenade.TabIndex = 11;
             this.grenade.TabStop = false;
             this.grenade.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1232, 814);
+            this.ClientSize = new System.Drawing.Size(924, 609);
             this.Controls.Add(this.grenade);
             this.Controls.Add(this.shieldBar);
             this.Controls.Add(this.shield);
@@ -218,7 +209,6 @@
             this.Controls.Add(this.txtAmmo);
             this.Controls.Add(this.superGun);
             this.Controls.Add(this.laserGun);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Zombie Killer";
             this.Load += new System.EventHandler(this.Form1_Load);
