@@ -1,9 +1,10 @@
 language: csharp
 mono: none
-dotnet: 2.1.2
+dotnet: 3.1
 solution: Zombie_Killer.sln
 
 script:
+- dotnet restore UnitTestProject1/UnitTestProject1.csproj
 - dotnet test UnitTestProject1/UnitTestProject1.csproj
 
 
