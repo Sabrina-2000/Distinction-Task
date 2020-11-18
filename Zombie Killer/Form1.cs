@@ -247,7 +247,7 @@ namespace Zombie_Killer
                             }
                         }
                     }
-                    // let the zombie chase the player
+                    // let the zombies chase the player
                     if (x.Left > player.Left)
                     {
                         x.Left -= zombieSpeed;
@@ -639,8 +639,6 @@ namespace Zombie_Killer
                 MakeZombies(); // create 3 zombies on the screen
             }
 
-
-
             goup = false;
             godown = false;
             goleft = false;
@@ -661,6 +659,21 @@ namespace Zombie_Killer
             SuperGunTimer.Start();
             shieldTimer.Start();
             GrenadeTimer.Start();
+        }
+
+        public int Get_Ammo()
+        {   //used for unit testing
+            return ammo;
+        }
+
+        public int Get_HP()
+        {   //used for unit testing
+            return playerHealth;
+        }
+
+        public int Get_ZombieCount()
+        {   //used for unit testing
+            return zombiesList.Count();
         }
 
         private void Form1_Load(object sender, EventArgs e)
