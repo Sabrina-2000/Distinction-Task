@@ -3,6 +3,8 @@ mono: none
 dotnet: 3.1
 solution: Zombie_Killer.sln
 script:
+    - dotnet restore
+    - msbuild
     - dotnet test UnitTestProject1/UnitTestProject1.csproj
 
 
