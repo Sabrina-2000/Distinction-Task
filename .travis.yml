@@ -4,6 +4,6 @@ dotnet: 2.1.2
 solution: Zombie_Killer.sln
 
 script:
-- dotnet test UnitTestProject1.csproj
+- dotnet test UnitTestProject1/UnitTestProject1.csproj
 
 
