@@ -1,13 +1,9 @@
 language: csharp
-solution: Zombie_Killer.sln
-sudo: true
 mono: none
 dotnet: 3.1
-
-before_script:
-- dotnet restore ".\Zombie_Killer.sln"
-
+solution: Zombie_Killer.sln
 script:
-- dotnet build ".\Zombie_Killer.sln" -c Release
-- dotnet test ".\Zombie_Killer.sln" -c Release -v n
+    - dotnet restore
+    - dotnet test
+
 
