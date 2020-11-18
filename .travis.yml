@@ -1,7 +1,7 @@
 language: csharp
 solution: Zombie_Killer.sln
 sudo: required
-mono: none
+mono: .NET Core 3.0
 dotnet: 3.0
 
 before_script:
