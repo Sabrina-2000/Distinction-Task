@@ -47,15 +47,15 @@
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[2.1.2, )"
             },
             "MSTest.TestFramework": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[2.1.2, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[3.1.404, )"
+              "version": "[16.8.0, )"
             },
             "coverlet.collector": {
               "target": "Package",

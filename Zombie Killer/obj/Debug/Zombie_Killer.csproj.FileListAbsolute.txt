@@ -37,16 +37,3 @@ C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.cs
 C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csproj.CoreCompileInputs.cache
 C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.exe
 C:\Users\cjjie\Desktop\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.pdb
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.exe.config
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.exe
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\bin\Debug\Zombie Killer.pdb
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csprojAssemblyReference.cache
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.ChooseCharacter.resources
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Form1.resources
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Menu.resources
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Properties.Resources.resources
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.Scoreboard.resources
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csproj.GenerateResource.cache
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie_Killer.csproj.CoreCompileInputs.cache
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.exe
-C:\Users\Ah Gang\Desktop\DP1_Code\Distinction-Task\Zombie Killer\obj\Debug\Zombie Killer.pdb
