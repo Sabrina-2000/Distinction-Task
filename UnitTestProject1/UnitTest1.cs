@@ -6,6 +6,7 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
+        //Since Form1 run the game in private methods. The testing is just for the initial state.
         [TestMethod]
         public void TestAmmoCount()
         {
@@ -28,6 +29,30 @@ namespace UnitTestProject1
             Form1 form1 = new Form1();
             int expected = 3;
             Assert.AreEqual(expected, form1.Get_ZombieCount());
+        }
+
+        [TestMethod]
+        public void TestInitialLevel()
+        {
+            Form1 form1 = new Form1();
+            int expected = 1;
+            Assert.AreEqual(expected, form1.Get_Level());
+        }
+
+        [TestMethod]
+        public void TestGrenadeCollectionStatus()
+        {
+            Form1 form1 = new Form1();
+            bool expected = false;
+            Assert.AreEqual(expected, form1.Get_GrenadeCollection());
+        }
+
+        [TestMethod]
+        public void TestTempScore()
+        {
+            Form1 form1 = new Form1();
+            int expected = 0;
+            Assert.AreEqual(expected, form1.Get_TempScore());
         }
     }
 }
