@@ -2,3 +2,8 @@
 Kills: 53
 Kills: 64
 Kills: 5
+Kills: 14
+Kills: 4
+Kills: 3
+Kills: 14
+Kills: 24

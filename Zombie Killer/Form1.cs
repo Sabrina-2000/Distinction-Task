@@ -35,6 +35,9 @@ namespace Zombie_Killer
         string path2 = "../../Text/date.txt";                   //The path of the date.txt
         bool isGrenadeCollected = false;                        //this bollean is false initially until the player collect the grenade
         int distance = 300;                                     //distance of throwing
+        int explosionTime = 0;
+        int level = 1;                                          //this integer will hold the level the player is at
+        int tempScore = 0;                                      // this integer will hold the score the player in each level and clear the value after level up
 
         List<PictureBox> zombiesList = new List<PictureBox>();  // list to store the zombie
         List<PictureBox> medicList = new List<PictureBox>();    // list to store the medic
@@ -80,6 +83,10 @@ namespace Zombie_Killer
             GrenadeTimer.Enabled = false;
         }
 
+        private void explosionTimerEvent(object sender, EventArgs e)
+        {
+            explosionTime++;
+        }
 
         private void MainTimerEvent(object sender, EventArgs e)
         {
@@ -125,8 +132,16 @@ namespace Zombie_Killer
 
             txtAmmo.Text = "Ammo: " + ammo;
             txtScore.Text = "Kills: " + score;
+            txtLevel.Text = "Level " + level;
 
-            if(goleft == true && player.Left > 0)
+            if (tempScore == 10)
+            {  //level up condition
+                level++;
+                tempScore = 0;
+                MakeZombies(); // create the new zombie to the list
+            }
+
+            if (goleft == true && player.Left > 0)
             {
                 player.Left -= speed;
             }
@@ -277,7 +292,7 @@ namespace Zombie_Killer
                         if (x.Bounds.IntersectsWith(j.Bounds)) // if bullets are intersect with zombies
                         {
                             score++; // score plus 1
-
+                            tempScore++;
                             this.Controls.Remove(j); // remove the bullets on screen
                             ((PictureBox)j).Dispose(); // dispose the picture box
                             this.Controls.Remove(x); // remove the zombie on screen
@@ -293,16 +308,24 @@ namespace Zombie_Killer
                 {
                     if (k is PictureBox && (string)k.Tag == "explosion" && x is PictureBox && (string)x.Tag == "zombie")
                     {
-                        //need to add range for the bound(havent done, now can only intersect with 1 zombie)
-                        if (x.Bounds.IntersectsWith(k.Bounds)) // if grenade range are intersect with zombies
+                        Rectangle intersectionArea = Rectangle.Intersect(x.Bounds, k.Bounds);
+                        while (intersectionArea.IsEmpty == false) // if grenade range are intersect with zombies
                         {
                             score++; // score plus 1
-                            this.Controls.Remove(k); // remove the grenade on screen
-                            ((PictureBox)k).Dispose(); // dispose the picture box
+                            tempScore++;
                             this.Controls.Remove(x); // remove the zombie on screen
                             ((PictureBox)x).Dispose(); // dispose the picture box
                             zombiesList.Remove(((PictureBox)x)); // remove the zombie from the list
                             MakeZombies(); // create the zombies
+                            break;
+                        }
+                        while (intersectionArea.IsEmpty && explosionTime == 1)
+                        {
+                            this.Controls.Remove(k); // remove the grenade on screen
+                            ((PictureBox)k).Dispose(); // dispose the picture box
+                            explosionTimer.Stop();
+                            explosionTime = 0;
+                            break;
                         }
                     }
                 }
@@ -348,6 +371,7 @@ namespace Zombie_Killer
             //take grenade from inventory and throw grenade
             if ((e.KeyCode == Keys.D4) && (isGrenadeCollected == true))
             {
+                explosionTimer.Start();
                 grenade.Visible = false;
                 GrenadeExplosion(facing);
             }
