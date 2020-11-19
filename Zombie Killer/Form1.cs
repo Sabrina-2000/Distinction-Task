@@ -699,6 +699,10 @@ namespace Zombie_Killer
         {   //used for unit testing
             return zombiesList.Count();
         }
+        public void Set_TempScore(int score)
+        {   //used for unit testing
+            tempScore = score;
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
