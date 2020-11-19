@@ -92,7 +92,12 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj",
         "projectName": "Zombie_Killer",
-        "projectPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj"
+        "projectPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
       },
       "frameworks": {
         "net472": {}
