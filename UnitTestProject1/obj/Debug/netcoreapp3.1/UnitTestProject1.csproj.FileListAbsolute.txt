@@ -306,3 +306,10 @@ C:\Users\cjjie\Desktop\Distinction-Task\UnitTestProject1\obj\Debug\netcoreapp3.1
 C:\Users\cjjie\Desktop\Distinction-Task\UnitTestProject1\obj\Debug\netcoreapp3.1\UnitTestProject1.dll
 C:\Users\cjjie\Desktop\Distinction-Task\UnitTestProject1\obj\Debug\netcoreapp3.1\UnitTestProject1.pdb
 C:\Users\cjjie\Desktop\Distinction-Task\UnitTestProject1\obj\Debug\netcoreapp3.1\UnitTestProject1.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\Distinction-Task\UnitTestProject1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\Users\user\Documents\GitHub\Distinction-Task\UnitTestProject1\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+C:\Users\user\Documents\GitHub\Distinction-Task\UnitTestProject1\bin\Debug\netcoreapp3.1\nunit.engine.dll
+C:\Users\user\Documents\GitHub\Distinction-Task\UnitTestProject1\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+C:\Users\user\Documents\GitHub\Distinction-Task\UnitTestProject1\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+C:\Users\user\Documents\GitHub\Distinction-Task\UnitTestProject1\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
+C:\Users\user\Documents\GitHub\Distinction-Task\UnitTestProject1\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll

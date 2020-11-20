@@ -17,7 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Zombie Killer\Zombie_Killer.csproj" />
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <FrameworkReference Include="Microsoft.WindowsDesktop.App" />
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App" Version ="3.1.0" />
   </ItemGroup>
 
 </Project>
