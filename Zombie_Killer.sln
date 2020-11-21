@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie_Killer", "Zombie Killer\Zombie_Killer.csproj", "{2C569809-0B6B-4947-AC8E-EB4641C89ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{FC3F39F7-A4DC-410C-A847-41F962299708}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "NUnitTestProject1\NUnitTestProject1.csproj", "{B373A055-A8A8-4383-B749-360AA0D0FD66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2C569809-0B6B-4947-AC8E-EB4641C89ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C569809-0B6B-4947-AC8E-EB4641C89ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C569809-0B6B-4947-AC8E-EB4641C89ACB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC3F39F7-A4DC-410C-A847-41F962299708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC3F39F7-A4DC-410C-A847-41F962299708}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC3F39F7-A4DC-410C-A847-41F962299708}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC3F39F7-A4DC-410C-A847-41F962299708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B373A055-A8A8-4383-B749-360AA0D0FD66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B373A055-A8A8-4383-B749-360AA0D0FD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B373A055-A8A8-4383-B749-360AA0D0FD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B373A055-A8A8-4383-B749-360AA0D0FD66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
