@@ -6,5 +6,6 @@ dist: xenial
 script:
   - choco install dotnetcore-sdk
   - dotnet restore 
-  - dotnet test NUnitTestProject1/NUnitTestProject1.csproj
+  - msbuild
+  - dotnet test NUnitTestProject1/bin/Debug/netcoreapp3.1/NUnitTestProject1.dll
 
