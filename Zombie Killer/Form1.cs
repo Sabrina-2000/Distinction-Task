@@ -712,6 +712,13 @@ namespace Zombie_Killer
             return tempScore;
         }
 
+        // This public method will return the ShieldList from the program 
+        public List<PictureBox> Get_ListOfShield()
+        {
+            // Used for unit testing purpose
+            return shieldList;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // This if-else statements are for to display the character based on the chosen character by the user

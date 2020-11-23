@@ -54,5 +54,15 @@ namespace UnitTestProject2
             int expected = 0;
             Assert.AreEqual(expected, form1.Get_TempScore());
         }
+
+        [TestMethod]
+        public void TestShieldList()
+        {
+            // The purpose of this test is to ensure that the List containing the Shield PictureBox 
+            // at the start of the program should be empty
+            Form1 form1 = new Form1();
+            int expected = 0;
+            Assert.AreEqual(expected, form1.Get_ListOfShield().Count);
+        }
     }
 }
