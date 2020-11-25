@@ -64,5 +64,21 @@ namespace UnitTestProject2
             int expected = 0;
             Assert.AreEqual(expected, form1.Get_ListOfShield().Count);
         }
+
+        [TestMethod]
+        public void TestNumberOfGun()
+        {
+            Form1 form1 = new Form1();
+            int expected = 0;
+            Assert.AreEqual(expected, form1.getNumberOfGunCollected());
+        }
+
+        [TestMethod]
+        public void TestGunType()
+        {
+            Form1 form1 = new Form1();
+            string expected = "NormalGun";
+            Assert.AreEqual(expected, form1.getTypeOfGun());
+        }
     }
 }

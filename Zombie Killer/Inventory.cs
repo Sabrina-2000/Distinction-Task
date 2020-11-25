@@ -25,9 +25,15 @@ namespace Zombie_Killer
             }
         }
 
+        
         public int numberOfGun()
         {
             return bag.Length;
+        }
+
+        public int numberOfGunCollected()
+        {
+            return numberOfItem;
         }
     }
 }

@@ -354,6 +354,7 @@ namespace Zombie_Killer
                 godown = false;
             }
 
+            //select gun by clicking 1,2,3 on the keyboard
             if((e.KeyCode == Keys.D1) && (inventory.numberOfGun()>=1))
             {
                 typeOfGun = guns.selectGun(1, inventory);
@@ -364,10 +365,11 @@ namespace Zombie_Killer
                 typeOfGun = guns.selectGun(2, inventory);
             }
 
-            if ((e.KeyCode == Keys.D3) && (inventory.numberOfGun() >= 2))
+            if ((e.KeyCode == Keys.D3) && (inventory.numberOfGun() >= 3))
             {
                 typeOfGun = guns.selectGun(3, inventory);
             }
+
             //take grenade from inventory and throw grenade
             if ((e.KeyCode == Keys.D4) && (isGrenadeCollected == true))
             {
@@ -710,6 +712,18 @@ namespace Zombie_Killer
         public int Get_TempScore()
         {   //used for unit testing
             return tempScore;
+        }
+
+        public int getNumberOfGunCollected()
+        {
+            //used for unit testing
+            return inventory.numberOfGunCollected();
+        }
+
+        public string getTypeOfGun()
+        {
+            //used for unit testing
+            return guns.selectGun(3, inventory);
         }
 
         // This public method will return the ShieldList from the program 
