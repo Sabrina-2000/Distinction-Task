@@ -673,6 +673,8 @@ namespace Zombie_Killer
             playerHealth = 100;
             score = 0;
             ammo = 10;
+            level = 1;
+            tempScore = 0;
 
             superGun.Image = null;
             laserGun.Image = null;
