@@ -33,7 +33,7 @@ namespace Zombie_Killer
         Random rnd = new Random();                              // this is an instance of the random class we will use this to create a random number for this game
         string path = "../../Text/Scoreboard.txt";              //The path of the Scoreboard.txt
         string path2 = "../../Text/date.txt";                   //The path of the date.txt
-        bool isGrenadeCollected = false;                        //this bollean is false initially until the player collect the grenade
+        bool isGrenadeCollected = false;                        //this boolean is false initially until the player collect the grenade
         int distance = 300;                                     //distance of throwing
         int explosionTime = 0;
         int level = 1;                                          //this integer will hold the level the player is at
@@ -482,7 +482,6 @@ namespace Zombie_Killer
             shootBullet.MakeBullet(this,typeOfGun);
         }
 
-        //explore image is not able to display only, the method is working if try with other image
         private void GrenadeExplosion(string direction)
         {
             Explosion grenadeExplosion = new Explosion(); // create the explosion
@@ -659,6 +658,12 @@ namespace Zombie_Killer
                 this.Controls.Remove(i); // Remove all the shields on the screen
             }
             shieldList.Clear();
+
+            foreach (PictureBox i in grenadeList)
+            {
+                this.Controls.Remove(i); // remove all the grenade on the screen
+            }
+            grenadeList.Clear(); // clear the grenadeList
 
             for (int i = 0; i < 3; i++)
             {
