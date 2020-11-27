@@ -13,7 +13,7 @@ namespace Zombie_Killer
 
         public string direction; // creating a public string called direction
         PictureBox explosion = new PictureBox(); // create a picture box 
-        private Timer explosionTimer = new Timer(); // create a new timer called tm. 
+        private Timer explosionTimer = new Timer(); // create a new timer called explosionTimer. 
         public int explosionLeft; // create a new public integer
         public int explosionTop; // create a new public integer
 
@@ -21,11 +21,11 @@ namespace Zombie_Killer
 
         public void MakeExplosion(Form form)
         {
-            explosion.Tag = "explosion"; // set the tag to bullet
-            explosion.Left = explosionLeft; // set bullet left 
-            explosion.Top = explosionTop; // set bullet right
-            explosion.BringToFront(); // bring the bullet to front of other objects
-            form.Controls.Add(explosion); // add the bullet to the screen
+            explosion.Tag = "explosion"; // set the tag to explosion
+            explosion.Left = explosionLeft; // set explosion left 
+            explosion.Top = explosionTop; // set explosion right
+            explosion.BringToFront(); // bring the explosion to front of other objects
+            form.Controls.Add(explosion); // add the explosion to the screen
             explosionTimer.Tick += new EventHandler(ExplosionTimerEvent); // assignment the timer with an event
             explosionTimer.Start(); // start the timer
         }
@@ -45,9 +45,9 @@ namespace Zombie_Killer
             {
                 explosionTimer.Stop(); // stop the timer
                 explosionTimer.Dispose(); // dispose the timer event and component from the program
-                explosion.Dispose(); // dispose the bullet
+                explosion.Dispose(); // dispose the explosion
                 explosionTimer = null; // nullify the timer object
-                explosion = null; // nullify the bullet object
+                explosion = null; // nullify the explosion object
             }
         }
     }

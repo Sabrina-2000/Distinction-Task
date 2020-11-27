@@ -6646,25 +6646,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\cjjie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
+      "projectUniqueName": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
       "projectName": "UnitTestProject2",
-      "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Documents\\GitHub\\Distinction-Task\\UnitTestProject2\\obj\\",
+      "projectPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
+      "packagesPath": "C:\\Users\\cjjie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\cjjie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6675,10 +6670,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\user\\Documents\\GitHub\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj": {
-              "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj"
+            "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj": {
+              "projectPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj"
             }
           }
         }
@@ -6691,7 +6685,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -6735,7 +6728,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
