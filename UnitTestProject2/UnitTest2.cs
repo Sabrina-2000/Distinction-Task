@@ -16,6 +16,8 @@ namespace UnitTestProject2
         {
             Form1 form1 = new Form1();
             int expected = 10;
+            form1.TestAmmoReduce(2);
+            expected = 8;
             Assert.AreEqual(expected, form1.Get_Ammo());
         }
 
@@ -24,6 +26,8 @@ namespace UnitTestProject2
         {
             Form1 form1 = new Form1();
             int expected = 100;
+            form1.TestHpReduce(30);
+            expected = 70;
             Assert.AreEqual(expected, form1.Get_HP());
         }
 
@@ -32,6 +36,8 @@ namespace UnitTestProject2
         {
             Form1 form1 = new Form1();
             int expected = 3;
+            form1.TestZombieIncrease(3);
+            expected = 6;
             Assert.AreEqual(expected, form1.Get_ZombieCount());
         }
 

@@ -704,15 +704,34 @@ namespace Zombie_Killer
             return ammo;
         }
 
+        public void TestAmmoReduce(int value)
+        {
+            ammo -= value;
+        }
+
         public int Get_HP()
         {   //used for unit testing
             return playerHealth;
+        }
+
+        public void TestHpReduce(int value)
+        {
+            playerHealth -= value;
         }
 
         public int Get_ZombieCount()
         {   //used for unit testing
             return zombiesList.Count();
         }
+
+        public void TestZombieIncrease(int value)
+        {
+            for(int i = 0; i < value; i++)
+            {
+                MakeZombies();
+            }
+        }
+
         public int Get_Level()
         {   //used for unit testing
             return level;
