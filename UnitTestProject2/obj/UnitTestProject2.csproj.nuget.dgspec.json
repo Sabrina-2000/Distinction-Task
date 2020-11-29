@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj": {}
+    "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj": {
+    "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
+        "projectUniqueName": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
         "projectName": "UnitTestProject2",
-        "projectPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
-        "packagesPath": "C:\\Users\\cjjie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\UnitTestProject2\\obj\\",
+        "projectPath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\UnitTestProject2\\UnitTestProject2.csproj",
+        "packagesPath": "C:\\Users\\Ah Gang\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\UnitTestProject2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cjjie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ah Gang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj": {
-                "projectPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj"
+              "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj": {
+                "projectPath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj"
               }
             }
           }
@@ -84,15 +87,15 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj": {
+    "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj",
+        "projectUniqueName": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj",
         "projectName": "Zombie_Killer",
-        "projectPath": "C:\\Users\\cjjie\\Desktop\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj"
+        "projectPath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\Distinction-Task\\Zombie Killer\\Zombie_Killer.csproj"
       },
       "frameworks": {
         "net472": {}

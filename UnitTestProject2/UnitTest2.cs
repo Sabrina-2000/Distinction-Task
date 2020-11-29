@@ -1,5 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Zombie_Killer;
+using System;
+using System.Windows.Forms;
+using System.Collections.Generic;
+
 
 namespace UnitTestProject2
 {
@@ -69,16 +73,28 @@ namespace UnitTestProject2
         public void TestNumberOfGun()
         {
             Form1 form1 = new Form1();
-            int expected = 0;
+            form1.testCollectGun("SuperGun");
+            form1.testCollectGun("LaserGun");
+            int expected = 2;
             Assert.AreEqual(expected, form1.getNumberOfGunCollected());
         }
 
         [TestMethod]
-        public void TestGunType()
+        public void TestDropSuperGun()
         {
             Form1 form1 = new Form1();
-            string expected = "NormalGun";
-            Assert.AreEqual(expected, form1.getTypeOfGun());
+            form1.DropSuperGun();
+            bool expected = true;
+            Assert.AreEqual(expected, form1.dropSuperGun);
+        }
+
+        [TestMethod]
+        public void TestDropLaserGun()
+        {
+            Form1 form1 = new Form1();
+            form1.DropLaserGun();
+            bool expected = true;
+            Assert.AreEqual(expected, form1.dropLaserGun);
         }
     }
 }

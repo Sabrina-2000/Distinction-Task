@@ -47,6 +47,8 @@ namespace Zombie_Killer
 
         Inventory inventory = new Inventory();
         Gun guns = new Gun();
+        public bool dropSuperGun = false;
+        public bool dropLaserGun = false;
 
         public Form1()
         {
@@ -332,7 +334,7 @@ namespace Zombie_Killer
             }
         }
 
-        private void KeyIsUp(object sender, KeyEventArgs e)
+        public void KeyIsUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
@@ -357,12 +359,13 @@ namespace Zombie_Killer
             //select gun by clicking 1,2,3 on the keyboard
             if((e.KeyCode == Keys.D1) && (inventory.numberOfGun()>=1))
             {
-                typeOfGun = guns.selectGun(1, inventory);
+                typeOfGun = guns.selectGun(1, inventory);//"SuperGun";
             }
 
             if ((e.KeyCode == Keys.D2) && (inventory.numberOfGun() >= 2))
             {
                 typeOfGun = guns.selectGun(2, inventory);
+                //typeOfGun = "LaserGun";
             }
 
             if ((e.KeyCode == Keys.D3) && (inventory.numberOfGun() >= 3))
@@ -555,7 +558,7 @@ namespace Zombie_Killer
             player.BringToFront(); // bring the player to the front
         }
 
-        private void DropSuperGun()
+        public void DropSuperGun()
         {
             PictureBox superGun = new PictureBox();
            
@@ -568,9 +571,10 @@ namespace Zombie_Killer
             this.Controls.Add(superGun); // add the superGun to the screen
             superGun.BringToFront(); // bring the superGun to the front
             player.BringToFront(); // bring the player to the front
+            dropSuperGun = true;
         }
 
-        private void DropLaserGun()
+        public void DropLaserGun()
         {
             PictureBox laserGun = new PictureBox();
             laserGun.Image = Properties.Resources.LaserGun;
@@ -582,6 +586,7 @@ namespace Zombie_Killer
             this.Controls.Add(laserGun); // add the laserGun to the screen
             laserGun.BringToFront(); // bring the laserGun to the front
             player.BringToFront(); // bring the player to the front
+            dropLaserGun = true;
         }
 
         private void DropShield()
@@ -732,6 +737,12 @@ namespace Zombie_Killer
             //used for unit testing
             return guns.selectGun(3, inventory);
         }
+
+        public void testCollectGun(string item)
+        {
+            inventory.collectItem(item);
+        }
+
 
         // This public method will return the ShieldList from the program 
         public List<PictureBox> Get_ListOfShield()
