@@ -736,10 +736,22 @@ namespace Zombie_Killer
         {   //used for unit testing
             return level;
         }
-        public bool Get_GrenadeCollection()
-        {   //used for unit testing
-            return isGrenadeCollected;
+
+        public void TestLevelIncease()
+        {
+            if (tempScore == 10)
+            {  
+                level++;
+                tempScore = 0;
+                MakeZombies(); 
+            }
         }
+
+        public void Set_TempScore(int temp)
+        {   //used for unit testing
+            tempScore = temp;
+        }
+
         public int Get_TempScore()
         {   //used for unit testing
             return tempScore;

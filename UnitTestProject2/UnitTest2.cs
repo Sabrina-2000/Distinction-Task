@@ -42,26 +42,53 @@ namespace UnitTestProject2
         }
 
         [TestMethod]
-        public void TestInitialLevel()
+        public void TestCurrentLevel()
         {
             Form1 form1 = new Form1();
             int expected = 1;
             Assert.AreEqual(expected, form1.Get_Level());
+
+            //level not affected if mark does not reach
+            form1.Set_TempScore(9);
+            form1.TestLevelIncease();
+            expected = 1;
+            Assert.AreEqual(expected, form1.Get_Level());
+
+            //increase level after reaching 10 marks
+            form1.Set_TempScore(10);
+            form1.TestLevelIncease();
+            expected = 2;
+            Assert.AreEqual(expected, form1.Get_Level());
         }
 
-        [TestMethod]
-        public void TestGrenadeCollectionStatus()
+        [TestMethod] 
+        public void TestZombieCountForDifferentLevel()
         {
             Form1 form1 = new Form1();
-            bool expected = false;
-            Assert.AreEqual(expected, form1.Get_GrenadeCollection());
+            int expected = 3;
+            Assert.AreEqual(expected, form1.Get_ZombieCount());
+
+            //zombie number increase by 1 after level increase
+            form1.Set_TempScore(10);
+            form1.TestLevelIncease();
+            expected = 4;
+            Assert.AreEqual(expected, form1.Get_ZombieCount());
         }
 
         [TestMethod]
-        public void TestTempScore()
+        public void TestCurrentTempScore()
         {
+            //temp score will clear to 0 when level increase
             Form1 form1 = new Form1();
             int expected = 0;
+            Assert.AreEqual(expected, form1.Get_TempScore());
+
+            //temp score will clear to 0 when level increase
+            form1.Set_TempScore(10);
+            expected = 10;
+            Assert.AreEqual(expected, form1.Get_TempScore());
+            form1.TestLevelIncease();
+            expected = 0;
             Assert.AreEqual(expected, form1.Get_TempScore());
         }
 
